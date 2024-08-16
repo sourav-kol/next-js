@@ -1,4 +1,37 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    webpack(config, { isServer }) {
+        config.externals = config.externals || {};
+        if (!isServer) {
+            config.externals = {
+                'react': 'React',
+                'react-dom': 'ReactDOM',
+                'lodash': '_',
+                'antd': 'antd',
+                'next': 'next'
+            }
+        }
+        return config;
+    },
+    reactStrictMode: false,
+    transpilePackages: [
+        "antd"
+    ],
+    output: "standalone",
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    experimental: {
+    },
+    compiler: {
+        removeConsole: process.env.NODE_ENV === "production",
+    },
+    sassOptions: {
+        fiber: false,
+    }
+};
 
 export default nextConfig;
