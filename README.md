@@ -1,4 +1,4 @@
-#clone the project
+## Clone the Project
 
--pnpm i
--pnpm run dev
+- pnpm i
+- pnpm run dev
