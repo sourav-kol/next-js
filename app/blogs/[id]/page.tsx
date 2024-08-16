@@ -1,5 +1,5 @@
 export default function Details() {
     return (
-      <>Blog Details</>
+      <h1>Blog Details</h1>
     );
   }

@@ -1,5 +1,5 @@
 export default function PreviewBlog() {
     return (
-      <>Preview Blog</>
+      <h1>Preview Blog</h1>
     );
   }

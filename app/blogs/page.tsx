@@ -1,5 +1,5 @@
 export default function BlogList() {
     return (
-      <>Blog List</>
+      <h1>Blog List</h1>
     );
   }

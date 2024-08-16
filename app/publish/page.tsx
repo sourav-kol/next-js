@@ -1,5 +1,5 @@
 export default function CreateBlog() {
     return (
-      <>Create blog</>
+      <h1>Create blog</h1>
     );
   }
